@@ -7,13 +7,13 @@ A Dockerfile for the [Gitit Wiki](https://github.com/jgm/gitit). There is no def
 For a first installation (if you don't already use Gitit) :
 
 ```bash
-sudo docker run -d --name gitit -p 80:5001 hyzual/gitit
+sudo docker run -d --name gitit -p 80:5001 eins78/gitit
 ```
 
 To use an existing Gitit wiki (assuming it's installed at /home/gitit/wiki), mount it as a volume :
 
 ```bash
-sudo docker run -d --name gitit -p 80:5001 -v /home/gitit/wiki:/data hyzual/gitit
+sudo docker run -d --name gitit -p 80:5001 -v /home/gitit/wiki:/data eins78/gitit
 ```
 
 ## Volumes
