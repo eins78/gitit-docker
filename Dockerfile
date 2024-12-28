@@ -18,6 +18,8 @@ RUN git clone https://github.com/jgm/gitit && \
 
 FROM debian:${DEBIAN_VERSION}-slim AS prod
 
+ENV GITIT_VERSION=${GITIT_VERSION}
+
 COPY --from=build /gitit/.stack-work /gitit/.stack-work
 COPY --from=build /root/.local/bin/gitit /usr/local/bin/
 COPY --from=build /root/.local/bin/expireGititCache /usr/local/bin/
